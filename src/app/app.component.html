@@ -1,1 +1,15 @@
-<h1>hi world</h1>
+<div class="parent-container">
+    <div>
+        <h1>Actuarian Calculator</h1>
+    </div>
+    <div class="action-container" style="justify-content: center;">
+        <button mat-raised-button color="primary" style="margin-right: 1em;" (click)="displayActuarianForm()">Add Record</button>
+        <button mat-raised-button color="accent" style="margin-left: 1em;">Calculate</button>
+    </div>
+    <div class="currentdata-container">
+        <div *ngIf="actuarianDataArray.length == 0">No current data</div>
+    </div>
+    <div class="resultsdata-container">
+        <div *ngIf="actuarianDataArray.length == 0">No current data</div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+.parent-container {
+    display: flex;
+    margin: 1em;
+    padding: 1em;
+    flex-direction: column;
+}
+
+.action-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 1;
+}
+
+.currentdata-container {
+    margin-top: 1em;
+    display: flex;
+    flex: 1;
+}
+
+.resultsdata-container {
+    margin-top: 1em;
+    display: flex;
+    flex: 1;
+}

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { ActuarianModel } from '../models/actuarian.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'WTWAcevedo';
+
+  actuarianDataArray: ActuarianModel[] = [];
+
+  constructor(public dialog: MatDialog) {
+
+  }
+
+  displayActuarianForm() {
+    alert('Im a form');
+    //Code to display form
+  }
+
 }
