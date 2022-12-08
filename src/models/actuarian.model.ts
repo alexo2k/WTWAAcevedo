@@ -15,7 +15,7 @@ export class ActuarianModel {
     public set mainRetention(v : number) {
         this._mainRetention = v;
     }
-    
+
     private _execution : ExecutionType;
     public get execution() : ExecutionType {
         return this._execution;
@@ -29,10 +29,46 @@ export class ActuarianModel {
         this._mainRetention = pMainRetention;
         this._execution = pExecution;
     }
-    
+
+}
+
+export class ActuarianResult {
+
+  private _referenceDate : Date;
+  public get referenceDate() : Date {
+    return this._referenceDate;
+  }
+  public set referenceDate(v : Date) {
+    this._referenceDate = v;
+  }
+
+
+  private _benchmark1 : number;
+  public get benchmark1() : number {
+    return this._benchmark1;
+  }
+  public set benchmark1(v : number) {
+    this._benchmark1 = v;
+  }
+
+
+  private _benchmark2 : number;
+  public get benchmark2() : number {
+    return this._benchmark2;
+  }
+  public set benchmark2(v : number) {
+    this._benchmark2 = v;
+  }
+
+  constructor(pReferenceDate: Date, pBenchmark1: number, pBenchmark2: number) {
+    this._referenceDate = pReferenceDate;
+    this._benchmark1 = pBenchmark1;
+    this._benchmark2 = pBenchmark2;
+  }
+
 }
 
 export enum ExecutionType {
-    Simple = 0,
-    Complex = 1
+    Simple = 'Simple',
+    Complex = 'Complex'
 }
